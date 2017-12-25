@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+.slick-dots
+{
+    position: absolute;
+    bottom: 25px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.slick-dots li button
+{  
+    border-radius: 10px;
+    background-color: #ddd;
+    border: solid 1px #ddd;
+
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 18px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    content: '•';
+    text-align: center;
+
+    opacity: .5;
+    color: #FFF;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: 1;
+    color: #FFF;
+}
+
+.slick-arrow {
+
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    border-radius: 50%;
+    overflow: hidden;
+
+    &.slick-prev {
+        background: url(/images/index/arrow-left-hover.png) no-repeat center center;
+        background-size: 100%;
+        &.slick-disabled {
+            background: url(/images/index/arrow-left.png) no-repeat center center;
+            background-size: 100%;
+        }
+    }
+
+    &.slick-next {
+        background: url(/images/index/tit-more-hover.png) no-repeat center center;
+        background-size: 100%;
+        &.slick-disabled {
+            background: url(/images/index/tit-more.png) no-repeat center center;
+            background-size: 100%;
+        }
+    }
+}
+
+.slick-next:before, .slick-prev:before {
+    content: none
+}

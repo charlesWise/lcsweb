@@ -1,0 +1,567 @@
+@charset "UTF-8";
+.login-wrap{
+    width: 100%;
+    background: #FFF;
+}
+.login-head{
+    width: 100%;
+    height: 118px;
+    box-shadow: 5px 5px 30px #E5E5E5;
+    .lg-head-info{
+        @include containerWidth(1200px, auto);
+        .logo{
+            float: left;
+            img{
+                width: 150px;
+                height: 50px;
+                padding-right: 30px;
+                border-right: 1px solid #D8D8D8;
+                margin-right: 30px;
+            }
+            em{
+                font-size: 22px;
+                color: #999999;
+                line-height: 118px;
+            }
+        }
+        .lg-return{
+            float: right;
+            margin-top: 76px;
+            font-size: 16px;
+            color: #999999;
+            i{
+                @include display;
+                @include backgroundImages('/images/userLogin/return.png',22px,18px); 
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+        }
+        .lg-return:hover{
+            color: #FF801A;
+            i{
+                @include backgroundImages('/images/userLogin/return-act.png',22px,18px); 
+            }
+        }
+        .lg-dl{
+            float: right;
+            margin-top: 76px;
+            font-size: 16px;
+            color: #999;
+            a{
+                color: #000;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.Login-foot{
+    width: 100%;
+    text-align: center;
+    p:first-child{
+        font-size: 16px;
+        color: #666;
+        margin: 30px auto 20px auto;
+        span{
+            color: #999;
+            padding: 0 22px;
+            border-right: 1px solid #ccc;
+        }
+        span:last-child{
+            border-right: 0;
+        }
+    }
+    p:last-child{
+        font-size: 14px;
+        color: #999999;
+    }
+    
+}
+
+.login-box-wrap{
+	@include height(false, 500px, auto);
+	background:url(/images/index/banner.png) no-repeat center bottom;
+    .box-content_info{
+        @include containerWidth(1200px, auto);
+        @extend %relative;
+    }
+}
+
+.login-content{
+	background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    width: 338px;
+    float: right;
+    margin-top: 60px;
+    .login-tit{
+        background: #FCFCFC;
+        border-bottom: 1px solid #E5E5E5;
+        text-align: center;
+        font-size: 16px;
+        color: #666666;
+        line-height: 60px;
+    }
+}
+.login-ul-box{
+	width:280px;
+    padding: 0 30px;
+	li{
+        @extend %relative;
+		padding-top: 20px;
+		&.li-error-show{
+			padding:5px 0;
+            margin-bottom: -20px;
+            @include height(ture, 20px, 20px);
+            font-size: 12px;
+            color: #F80A00;
+            text-align: right;
+		}
+        .code-img{
+            width:100px;
+            height: 40px;
+            float: right;
+        }
+        i{
+            @include display;
+            @extend %absolute;
+            left: 20px;
+            top: 30px;
+             &.lg-tel{
+                @include backgroundImages('/images/userLogin/login-tel.png',16px,20px); 
+            }
+            &.lg-pwd{
+                @include backgroundImages('/images/userLogin/login-pwd.png',16px,20px);
+            }
+            &.lg-yzm{
+                @include backgroundImages('/images/userLogin/login-yzm.png',16px,20px);
+            }
+        }
+	}
+    li:last-child{
+        text-align: right;
+        margin-bottom: 30px;
+        a{
+            font-size: 14px;
+            color: #999999;
+            padding: 0 10px;
+            &.active{
+                color: #FF801A;
+            }
+        }
+        a:first-child{
+            border-right: 1px solid #E5E5E5;
+            
+        }
+    }
+}
+.lg-input{
+	width:232px;
+	@include height(true, 36px, 36px);
+    border: 1px solid #CCCCCC;
+	padding-left:46px;
+	background:#fff;
+	color:#999;
+	
+	&.yz-ipt{
+		width:112px;
+		img{
+			vertical-align:top;
+		}
+	}
+}
+.lg-input:focus{  
+    border: 1px solid #508CEE;
+    &::-webkit-input-placeholder{
+		color:#bcbcbc;
+	}
+	&::-ms-input-placeholder{
+		color:#bcbcbc;
+	}
+	&::input-placeholder{
+		color:#bcbcbc;
+	}
+}  
+.login-btn{
+     margin-top: 5px;
+    background: #508CEE;
+    border: 1px solid #5D96F2;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #FFFFFF;
+    height: 40px;
+    text-align: center;
+    width: 280px;
+}
+
+
+//找回密码
+.forget-mains{
+        overflow: hidden;
+        width: 960px;
+        margin: 0 auto 120px auto;
+    .forget-indicator01{
+        @include backgroundImages('/images/userLogin/forget01.png',660px,125px);
+        margin: 60px auto;
+    }
+    .forget-indicator02{
+        @include backgroundImages('/images/userLogin/forget02.png',660px,125px);
+        margin: 60px auto;
+    }
+    .forget-indicator03{
+        @include backgroundImages('/images/userLogin/forget03.png',660px,125px);
+        margin: 60px auto;
+    }
+    .reg-indicator01{
+        @include backgroundImages('/images/userLogin/register01.png',680px,140px);
+        margin: 60px auto;
+    }
+    .reg-indicator02{
+        @include backgroundImages('/images/userLogin/register02.png',680px,140px);
+        margin: 60px auto;
+    }
+    .reg-indicator03{
+        @include backgroundImages('/images/userLogin/register03.png',680px,140px);
+        margin: 60px auto;
+    }
+	.form-group{
+        width: 460px;
+        line-height: 48px;
+        display: block;
+        position: relative;
+        overflow: hidden;
+		input{
+            width: 338px;
+            @include height(true,44px,44px);
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            padding: 2px 0px 2px 120px;
+            position: relative;
+            // margin-bottom: 30px;
+			&:focus{
+				border-color: #FF801A;
+			}
+			&.error{
+				border-color: red;
+			}
+		}
+        label{
+            position: absolute;
+            top: 0;
+            left: 10px;
+            z-index: 1;
+            letter-spacing: 3px;
+        }
+        .code-img{
+            position: absolute;
+            right: 2px;
+            top: 2px;
+            width: 114px;
+            height: 46px;
+            cursor: pointer;
+        }
+		button{
+			width: 100%;
+			border-radius: 5px;
+		}
+        select{
+            background: #EAEAEA;
+            border: 1px solid #B5B5B5;
+            width: 170px;
+            height: 50px;
+            margin-left: 28px;
+        }
+        select:last-child{
+            margin-left: 20px;
+        }
+	}
+    .tips-inner{
+        width: 100%;
+        line-height: 30px;
+        height: 30px;
+        color: #F00;
+        text-indent: 1em;
+        overflow: hidden;
+        &.tips-org{
+            color: #FF801A;
+            em{
+                color: #508CEE;
+            }
+        }
+        i{
+            display: inline-block;
+            margin-right: 5px;
+            vertical-align: sub;
+        }
+        .tips01{
+            @include backgroundImages('/images/userLogin/tips01.png',18px,18px);
+        }
+        .tips02{
+            @include backgroundImages('/images/userLogin/tips02.png',18px,18px);
+        }
+    }
+    .form-check{
+        margin-bottom: 35px;
+        color: rgba(0,0,0,0.60);
+        em{
+            color: #200000;
+        }
+    }
+    .tips-check{
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        @include backgroundImages('/images/userLogin/tips-check.png',20px,20px);
+    }
+    .hook-check{
+        display: inline-block;
+        @include backgroundImages('/images/userLogin/hook-check.png',18px,18px);
+        margin-right: 10px;
+        vertical-align: sub;
+        cursor: pointer;
+        &.active{
+            @include backgroundImages('/images/userLogin/hook-check-act.png',18px,18px);
+        }
+    }
+    .button-code-btn{
+        display: inline-block;
+        width: 114px;
+        height: 46px;
+        line-height: 46px;
+        text-align: center;
+        color: rgba(0,0,0,0.60);
+        background: #EBEBEB;
+        border: 0;
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        cursor: pointer;
+    }
+    .btn-orange{
+        border: 0;
+        background: #FF801A;
+        color: #FFF;
+    }
+}
+//重置密码成功
+.forget-succ{
+    width: 480px;
+    margin: 0 auto;
+    .succ-txt{
+        margin-top: 140px;
+        font-size: 36px;
+        color: #333333;
+        text-align: center;
+        .p1{
+            font-size: 16px;
+        }
+        &.textl{
+            text-align: left;
+            width: 330px;
+            margin: 0 auto;
+        }
+    }
+    .succ-btn{
+        margin: 100px auto;
+        a{
+            display: block;
+            width: 230px;
+            height: 50px;
+            background: #FF801A;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #FFF;
+            float: left;
+            line-height: 50px;
+            text-align: center;
+        }
+        a:last-child{
+            margin-left: 20px;
+        }
+    }
+}
+
+//注册
+.reg-l{
+    float: left;
+    border-right: 1px solid rgba(0,0,0,0.12);
+    width: 600px;
+}
+.reg-r{
+    float: left;
+    width: 359px;
+    li{
+        overflow: hidden;
+        img{
+            margin: 0 40px 60px 80px;
+            float: left;
+            width: 52px;
+        }
+        div{
+            width: 320px;
+        }
+        h2{
+            font-size: 16px;
+            color: #000000;
+            font-weight: bold;
+        }
+        p{
+            font-size: 14px;
+            color: #666666;
+            margin-top: 6px;
+        }
+    }
+}
+
+// 区域选择
+.select-region{
+    @extend %fr;
+    width: 160px;
+    font-size: 16px;
+    color: #666666;
+    margin-left: 40px;
+    .sel-inner{
+        color: #999999;
+        padding: 0 20px;
+        background: #FFF;
+        height: 48px;
+        border: 1px solid #ccc;
+        i{
+            display: inline-block;
+            float: right;
+            margin-top: 20px;
+        }
+        .drop-down{
+            @include backgroundImages('/images/userLogin/drop-down.png',12px,9px);
+        }
+        .pull{
+            @include backgroundImages('/images/userLogin/pull.png',12px,9px);
+        }
+    }
+    
+    .region{
+        background: #fff;
+        border: 1px solid #E5E5E5;
+        border-top: 0;
+        ul{
+            height: 190px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            li{
+                font-size: 16px;
+                color: #999999;
+                padding-left: 20px;
+                &:hover{
+                    background: #F2F2F2;
+                }
+            }
+        }
+    }
+}
+
+// 注册 找回密码状态
+.state-wrap {
+    position: relative;
+    width: 640px;
+    margin: 60px auto;
+    .state-progress {
+        @include backgroundImages('/images/userLogin/progress.png',170px,22px);
+        &.active{
+            @include backgroundImages('/images/userLogin/progress-bar.png',170px,22px);
+        }
+    }
+    .state-item {
+        width: 270px;
+        float: left;
+        &:last-child{
+            width: 100px;
+        }
+        .state-item-num{
+            img{
+                display: inline-block;
+                vertical-align: middle;
+                width: 96px;
+                height: 96px;
+            }
+            span{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            // .rg-state01{
+            //         @include backgroundImages('/images/userLogin/rg-state01.png',96px,96px);
+            // }
+            // .rg-state02{
+            //         @include backgroundImages('/images/userLogin/rg-state02.png',96px,96px);
+            // }
+            // .rg-state03{
+            //         @include backgroundImages('/images/userLogin/rg-state03.png',96px,96px);
+            // }
+            // .rg-state04{
+            //         @include backgroundImages('/images/userLogin/rg-state04.png',96px,96px);
+            // }
+            // .rg-state05{
+            //         @include backgroundImages('/images/userLogin/rg-state05.png',96px,96px);
+            // }
+            // .rg-state06{
+            //         @include backgroundImages('/images/userLogin/rg-state06.png',96px,96px);
+            // }
+            // .rg-state07{
+            //         @include backgroundImages('/images/userLogin/rg-state07.png',96px,96px);
+            // }
+
+            // .pd-state01{
+            //         @include backgroundImages('/images/userLogin/pd-state01.png',96px,96px);
+            // }
+            // .pd-state02{
+            //         @include backgroundImages('/images/userLogin/pd-state02.png',96px,96px);
+            // }
+            // .pd-state03{
+            //         @include backgroundImages('/images/userLogin/pd-state03.png',96px,96px);
+            // }
+            // .pd-state04{
+            //         @include backgroundImages('/images/userLogin/pd-state04.png',96px,96px);
+            // }
+            // .pd-state05{
+            //         @include backgroundImages('/images/userLogin/pd-state05.png',96px,96px);
+            // }
+            // .pd-state06{
+            //         @include backgroundImages('/images/userLogin/pd-state06.png',96px,96px);
+            // }
+            // .pd-state07{
+            //         @include backgroundImages('/images/userLogin/pd-state07.png',96px,96px);
+            // }
+        }
+        .state-item-title {
+            font-size: 18px;
+            color: #666666;
+            margin-top: 10px;
+        }
+    }
+}
+%clearfix{
+  @if $lte7 {
+    *zoom: 1;
+  }
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+    font: 0/0 a;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.reg-wrapper {
+    @extend %clearfix;
+}
+.state-wrap {
+    @extend %clearfix;
+}
+.fgt-form {
+    ul {
+        li {
+            margin: 0 auto;
+        }
+    }
+}

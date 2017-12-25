@@ -1,0 +1,18 @@
+@charset "UTF-8";
+@import "sassCore/base";//引用base
+@import "base/sprites"; //compass 雪碧图 基本引用
+@import 'base/variable'; // 网站基础变量设置
+@import "sassCore/core/setting"; //sassCore 文件引用
+@import "sassCore/core/css3"; //sassCore 文件引用
+@import "sassCore/core/mixin"; //sassCore 文件引用
+
+@import "pages/header"; 
+@import "pages/footer"; 
+@import "pages/index";
+@import "pages/userlogin"; //登录注册
+@import "pages/plist";
+@import "pages/collection";
+@import "pages/detail";//产品详情
+@import "pages/accountcenter";//账户中心
+@import "pages/capital"; //资金中心
+@import "pages/service"; //右侧浮动

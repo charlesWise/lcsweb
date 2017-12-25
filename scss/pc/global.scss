@@ -1,0 +1,5 @@
+@charset "UTF-8";
+@import 'base/variable';// 网站基础变量设置
+@import 'sassCore/base'; //sassCore 库文件
+@import 'sassCore/function'; //function
+@import "base/sprites"; //compass 雪碧图 基本引用

@@ -1,0 +1,157 @@
+@charset "UTF-8";
+//右侧
+
+.fixed-aside{
+	width: 58px;
+    position: fixed;
+	right: 5px;
+	top: 50%;
+    margin-top: -140px;
+	.btn_talk{
+		display: block;
+		text-align: center;
+		@include height(true, 58px, 58px);
+		cursor:pointer; 
+		background: #FFF;
+		&:hover{
+			color:$white;
+			background: #508CEE;
+		}
+		i{
+			background-size: 100%;
+			display: inline-block;
+    		vertical-align: middle;
+			text-align: center;
+			position: relative;
+			span.text1{
+				display: inline-block;
+				position: absolute;
+				top:-10px;
+				left:14px;
+			}
+			span.text2{
+				display: inline-block;
+				position: absolute;
+				top:11px;
+				left:14px;
+			}
+		}
+	}
+	i{
+		display: block;
+	}
+
+	.online{
+		@extend %absolute;
+		clear: both;
+		width: 128px;
+		left: -128px;
+		// padding:15px 10px 10px;
+		// background:#fff;
+		// border:$border;
+		// color:$gray_66;
+		img{
+			width: 128px;
+		}
+		&.doubleApp{
+			top: 60px;
+		}
+		&.doubleCode{
+			top: 65px;
+		}
+		.fixedD{
+			@extend %absolute;
+			bottom:75px;
+			right:-13px;
+			color:#fff;
+			font-size: 30px;
+		}
+	}
+
+	.service-mess{
+		width: 58px;
+    	height: 58px;
+		border: 1px solid #E5E5E5;
+    	border-bottom: 0;
+		i{
+			@include backgroundImages('/images/index/kefu1.png',28px,28px);
+
+		}
+		a:hover{
+			i{
+				//@include backgroundImages('/images/index/kefu2.png',60px,60px);
+				height:60px;
+				width:60px;
+				background: unset;
+			}
+		}
+	}
+	.app-code{
+		@extend .service-mess;
+		i{
+			@include backgroundImages('/images/index/weixin1.png',28px,28px);
+		}
+		a:hover{
+			i{
+				//@include backgroundImages('/images/index/weixin2.png',60px,60px);
+				height:60px;
+				width:60px;
+			}
+		}
+	}
+	.service-app{
+		@extend .service-mess;
+		i{
+			@include backgroundImages('/images/index/app1.png',28px,28px);
+
+		}
+		a:hover{
+			i{
+				//@include backgroundImages('/images/index/app2.png',60px,60px);
+			}
+		}
+	}
+	.service-wenti{
+		@extend .service-mess;
+		border-bottom: 1px solid #E5E5E5;
+		i{
+			@include backgroundImages('/images/index/wenti1.png',28px,28px);
+
+		}
+		a:hover{
+			i{
+				//@include backgroundImages('/images/index/wenti2.png',60px,60px);
+			}
+		}
+	}
+	.service-top{
+		margin-top: 20px;
+		@extend .service-mess;
+		border-bottom: 1px solid #E5E5E5;
+		i{
+			@include backgroundImages('/images/index/top1.png',28px,28px);
+
+		}
+		a:hover{
+			i{
+				@include backgroundImages('/images/index/top2.png',60px,60px);
+			}
+		}
+	}
+}
+
+//加载项 图标 loading
+.loading {
+    @include backgroundImages('/images/investPc/loading.gif',120px,120px);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -60px;
+    margin-top: -60px;
+    z-index: 9;
+}
+
+//遮罩层
+.mask-bg{
+	@extend %mask;
+}
